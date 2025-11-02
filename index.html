@@ -307,12 +307,9 @@
   <section class="py-20 px-6">
    <div class="max-w-7xl mx-auto space-y-32">
     <div class="grid md:grid-cols-2 gap-12 items-center fade-in">
-     <div class="parallax">
-      <div class="rounded-3xl overflow-hidden shadow-2xl floating">
-       <svg viewbox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><rect fill="#667eea" width="600" height="600" /> <circle cx="300" cy="300" r="150" fill="white" opacity="0.1" /> <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="60" fill="white" opacity="0.5">
-         Aurora X1
-        </text>
-       </svg>
+     <div class="parallax" style="transform: translate(8.7486px, -4.44853px);">
+      <div class="rounded-3xl overflow-hidden shadow-2xl floating bg-white p-8">
+       <img src="img/X1 Pro.png" alt="Aurora X1 Pro" class="w-full h-auto object-contain" style="max-height: 400px;">
       </div>
      </div>
      <div>
@@ -347,12 +344,9 @@
         </svg> Enhanced Bass Response</li>
       </ul><button class="px-8 py-4 bg-purple-600 text-white rounded-full font-semibold text-lg hover:bg-purple-700 transition-all">Learn More</button>
      </div>
-     <div class="parallax order-1 md:order-2">
-      <div class="rounded-3xl overflow-hidden shadow-2xl floating">
-       <svg viewbox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"><rect fill="#764ba2" width="600" height="600" /> <circle cx="300" cy="300" r="150" fill="white" opacity="0.1" /> <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="50" fill="white" opacity="0.5">
-         Aurora Sport
-        </text>
-       </svg>
+     <div class="parallax order-1 md:order-2" style="transform: translate(8.7486px, -4.44853px);">
+      <div class="rounded-3xl overflow-hidden shadow-2xl floating bg-white p-8">
+       <img src="img/sport.png" alt="Aurora Sport" class="w-full h-auto object-contain" style="max-height: 400px;">
       </div>
      </div>
     </div>
@@ -421,21 +415,28 @@
   <section class="py-20 px-6 bg-gray-900 text-white">
    <div class="max-w-7xl mx-auto">
     <div class="relative rounded-3xl overflow-hidden h-96 md:h-[600px] fade-in">
-     <svg viewbox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><defs>
-       <lineargradient id="videoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
-       </lineargradient>
-      </defs> <rect fill="url(#videoGrad)" width="1200" height="600" /> <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="80" fill="white" opacity="0.2">
-       Experience Aurora
-      </text>
-     </svg>
-     <div class="video-overlay" id="videoOverlay">
-      <div class="play-button bg-white bg-opacity-20 backdrop-blur-sm">
-       <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewbox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
-       </svg>
+      <video autoplay loop muted playsinline class="w-full h-full object-cover">
+        <source src="product video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-500 opacity-80"></div>
+      <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+        <h3 class="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">Experience Aurora</h3>
       </div>
-     </div>
+     <div class="video-overlay fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden" id="videoOverlay">
+      <div class="relative w-full max-w-4xl mx-4">
+        <button class="absolute -top-12 right-0 text-white text-4xl" id="closeVideo">&times;</button>
+        <video id="productVideo" class="w-full rounded-lg shadow-2xl" controls>
+          <source src="product video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <div class="play-button bg-white bg-opacity-20 backdrop-blur-sm cursor-pointer" id="playButton">
+      <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M6.3 2.841A1.5 1.5 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"></path>
+      </svg>
+    </div>
     </div>
     <div class="text-center mt-12">
      <h3 class="text-4xl font-bold mb-4">See Aurora in Action</h3>
@@ -452,49 +453,47 @@
     <p class="mt-6 text-sm opacity-75">We respect your privacy. Unsubscribe anytime.</p>
    </div>
   </section><!-- Instagram Feed -->
-  <section class="py-20 px-6">
    <div class="max-w-7xl mx-auto">
     <h2 class="text-5xl font-bold text-center mb-4 fade-in">Follow @AuroraAudio</h2>
     <p class="text-center text-gray-600 mb-12 fade-in">Join our community of audio enthusiasts</p>
     <div class="social-grid grid grid-cols-2 md:grid-cols-4 gap-4">
-     <div class="relative aspect-square rounded-2xl overflow-hidden cursor-pointer fade-in">
-      <svg viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><rect fill="#667eea" width="400" height="400" /> <circle cx="200" cy="200" r="80" fill="white" opacity="0.2" />
-      </svg>
-      <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all flex items-center justify-center">
-       <div class="text-white opacity-0 hover:opacity-100 transition-opacity">
-        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
-        </svg>
-       </div>
+     <!-- Facebook -->
+     <div class="relative aspect-square rounded-2xl overflow-hidden cursor-pointer fade-in visible bg-white">
+      <img src="img/facebook_logo.png" alt="Facebook" class="w-full h-full object-contain p-8">
+      <div class="absolute inset-0 bg-blue-600 bg-opacity-0 hover:bg-opacity-30 transition-all flex items-center justify-center">
+       <a href="#" class="text-white opacity-0 hover:opacity-100 transition-opacity">
+        <img src="img/facebook_logo.png" alt="Facebook" class="w-12 h-12 object-contain">
+       </a>
       </div>
      </div>
-     <div class="relative aspect-square rounded-2xl overflow-hidden cursor-pointer fade-in">
-      <svg viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><rect fill="#764ba2" width="400" height="400" /> <circle cx="200" cy="200" r="80" fill="white" opacity="0.2" />
-      </svg>
-      <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all flex items-center justify-center">
-       <div class="text-white opacity-0 hover:opacity-100 transition-opacity">
-        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
-        </svg>
-       </div>
+     
+     <!-- Twitter -->
+     <div class="relative aspect-square rounded-2xl overflow-hidden cursor-pointer fade-in visible bg-white">
+      <img src="img/twitter_logo.png" alt="Twitter" class="w-full h-full object-contain p-8">
+      <div class="absolute inset-0 bg-blue-400 bg-opacity-0 hover:bg-opacity-30 transition-all flex items-center justify-center">
+       <a href="#" class="text-white opacity-0 hover:opacity-100 transition-opacity">
+        <img src="img/twitter_logo.png" alt="Twitter" class="w-12 h-12 object-contain">
+       </a>
       </div>
      </div>
-     <div class="relative aspect-square rounded-2xl overflow-hidden cursor-pointer fade-in">
-      <svg viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><rect fill="#f093fb" width="400" height="400" /> <circle cx="200" cy="200" r="80" fill="white" opacity="0.2" />
-      </svg>
-      <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all flex items-center justify-center">
-       <div class="text-white opacity-0 hover:opacity-100 transition-opacity">
-        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
-        </svg>
-       </div>
+     
+     <!-- YouTube -->
+     <div class="relative aspect-square rounded-2xl overflow-hidden cursor-pointer fade-in visible bg-white">
+      <img src="img/youtube_logo.png" alt="YouTube" class="w-full h-full object-contain p-8">
+      <div class="absolute inset-0 bg-red-600 bg-opacity-0 hover:bg-opacity-30 transition-all flex items-center justify-center">
+       <a href="#" class="text-white opacity-0 hover:opacity-100 transition-opacity">
+        <img src="img/youtube_logo.png" alt="YouTube" class="w-12 h-12 object-contain">
+       </a>
       </div>
      </div>
-     <div class="relative aspect-square rounded-2xl overflow-hidden cursor-pointer fade-in">
-      <svg viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" class="w-full h-full"><rect fill="#4facfe" width="400" height="400" /> <circle cx="200" cy="200" r="80" fill="white" opacity="0.2" />
-      </svg>
-      <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all flex items-center justify-center">
-       <div class="text-white opacity-0 hover:opacity-100 transition-opacity">
-        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
-        </svg>
-       </div>
+     
+     <!-- Instagram -->
+     <div class="relative aspect-square rounded-2xl overflow-hidden cursor-pointer fade-in visible bg-white">
+      <img src="img/logo_insta.png" alt="Instagram" class="w-full h-full object-contain p-8">
+      <div class="absolute inset-0 bg-pink-600 bg-opacity-0 hover:bg-opacity-30 transition-all flex items-center justify-center">
+       <a href="#" class="text-white opacity-0 hover:opacity-100 transition-opacity">
+        <img src="img/logo_insta.png" alt="Instagram" class="w-12 h-12 object-contain">
+       </a>
       </div>
      </div>
     </div>
@@ -547,8 +546,8 @@
     <div class="grid md:grid-cols-2">
      <div class="bg-gradient-to-br from-purple-600 to-pink-600 p-12 flex items-center justify-center">
       <div class="text-white text-center">
-       <div class="text-8xl mb-4">
-        
+       <div class="h-48 w-48 mx-auto mb-6">
+         <img src="${product.image}" alt="${product.name}" class="h-full w-full object-contain">
        </div>
        <h3 class="text-3xl font-bold" id="modalProductName">Product Name</h3>
       </div>
@@ -597,19 +596,21 @@
     };
 
     const products = [
-      { id: 1, name: 'Aurora X1 Pro', price: 299, category: 'wireless', description: 'Flagship model with adaptive noise cancellation' },
-      { id: 2, name: 'Aurora Sport', price: 199, category: 'sport', description: 'Designed for athletes and active lifestyles' },
-      { id: 3, name: 'Aurora Classic', price: 249, category: 'wireless', description: 'Timeless design meets modern technology' },
-      { id: 4, name: 'Aurora Studio', price: 399, category: 'wired', description: 'Professional-grade studio monitors' },
-      { id: 5, name: 'Aurora Lite', price: 149, category: 'wireless', description: 'Affordable excellence for everyday use' },
-      { id: 6, name: 'Aurora Elite', price: 349, category: 'wireless', description: 'Premium comfort with extended battery' }
+      { id: 1, name: 'Aurora X1 Pro', price: 299, category: 'wireless', description: 'Flagship model with adaptive noise cancellation', image: 'img/X1 Pro.png' },
+      { id: 2, name: 'Aurora Classic', price: 199, category: 'wired', description: 'Timeless design with premium sound', image: 'img/classic.png' },
+      { id: 3, name: 'Aurora Elite', price: 349, category: 'wireless', description: 'Luxury headphones with premium materials', image: 'img/elite.png' },
+      { id: 4, name: 'Aurora Lite', price: 149, category: 'wireless', description: 'Lightweight and comfortable for all-day wear', image: 'img/lite.png' },
+      { id: 5, name: 'Aurora Sport', price: 179, category: 'sport', description: 'Sweat-resistant and secure fit for active lifestyles', image: 'img/sport.png' },
+      { id: 6, name: 'Aurora Studio', price: 399, category: 'wired', description: 'Professional-grade audio for studio use', image: 'img/studio.png' },
+      { id: 11, name: 'Aurora On-Ear', price: 229, category: 'wireless', description: 'Compact on-ear design with premium sound', image: 'img/on-ear.png' },
+      { id: 12, name: 'Aurora Over-Ear', price: 279, category: 'wireless', description: 'Immersive over-ear experience', image: 'img/over-ear.png' }
     ];
 
     const newArrivals = [
-      { id: 7, name: 'Aurora Neo', price: 279, category: 'wireless', image: ' ' },
-      { id: 8, name: 'Aurora Flex', price: 189, category: 'sport', image: ' ' },
-      { id: 9, name: 'Aurora Zen', price: 229, category: 'wireless', image: ' ' },
-      { id: 10, name: 'Aurora Pro Max', price: 449, category: 'wired', image: ' ' }
+      { id: 7, name: 'Aurora Neo', price: 279, category: 'wireless', image: 'img/elite.png' },
+      { id: 8, name: 'Aurora Flex', price: 189, category: 'sport', image: 'img/sport.png' },
+      { id: 9, name: 'Aurora Zen', price: 229, category: 'wireless', image: 'img/lite.png' },
+      { id: 10, name: 'Aurora Pro Max', price: 449, category: 'wired', image: 'img/studio.png' }
     ];
 
     let currentFilter = 'all';
@@ -620,8 +621,8 @@
       const carousel = document.getElementById('productCarousel');
       carousel.innerHTML = products.map(product => `
         <div class="product-card min-w-[280px] bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-product-id="${product.id}">
-          <div class="h-64 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-8xl">
-            
+          <div class="h-64 bg-gray-100 flex items-center justify-center overflow-hidden">
+            <img src="${product.image}" alt="${product.name}" class="h-full w-full object-contain p-4" onerror="this.src='img/placeholder.png'">
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">${product.name}</h3>
@@ -662,8 +663,8 @@
 
       grid.innerHTML = filtered.map(product => `
         <div class="product-card bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer fade-in" data-product-id="${product.id}">
-          <div class="h-64 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-6xl">
-            
+          <div class="h-64 bg-gray-100 flex items-center justify-center overflow-hidden">
+            <img src="${product.image}" alt="${product.name}" class="h-full w-full object-contain p-4" onerror="this.src='img/placeholder.png'">
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold mb-2">${product.name}</h3>
@@ -1015,6 +1016,37 @@
         ])
       });
     }
+
+    // Video Playback Functionality
+    const videoOverlay = document.getElementById('videoOverlay');
+    const playButton = document.getElementById('playButton');
+    const closeVideo = document.getElementById('closeVideo');
+    const productVideo = document.getElementById('productVideo');
+
+    // Open video modal
+    playButton.addEventListener('click', function() {
+      videoOverlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when video is open
+      productVideo.play();
+    });
+
+    // Close video modal
+    closeVideo.addEventListener('click', function() {
+      videoOverlay.classList.add('hidden');
+      document.body.style.overflow = ''; // Re-enable scrolling
+      productVideo.pause();
+      productVideo.currentTime = 0; // Reset video to start
+    });
+
+    // Close when clicking outside the video
+    videoOverlay.addEventListener('click', function(e) {
+      if (e.target === videoOverlay) {
+        videoOverlay.classList.add('hidden');
+        document.body.style.overflow = '';
+        productVideo.pause();
+        productVideo.currentTime = 0;
+      }
+    });
 
     renderProductCarousel();
     renderNewArrivals();
